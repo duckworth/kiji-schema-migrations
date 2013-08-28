@@ -106,8 +106,9 @@ public class MigrateMojo extends AbstractMojo {
                         if (filePrefix.compareTo(migration) > 0) {
                             try {
                                 log.info("Executing " + file.getCanonicalPath() + " ...");
-                                InputStream in = new FileInputStream(ddl);
+                                InputStream in = new FileInputStream(file);
                                 client.executeStream(in);
+                                log.info(client.getLastOutput());
                             } catch (FileNotFoundException fnfex) {
                                 new MojoExecutionException("Could not find ddl file", fnfex);
                             }

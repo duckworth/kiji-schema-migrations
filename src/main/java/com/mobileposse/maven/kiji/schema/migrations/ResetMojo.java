@@ -44,7 +44,7 @@ public class ResetMojo extends AbstractMojo {
         log.info("");
         log.info("Resetting kiji schema migration version");
         log.info("Kiji URI: " + this.kijiURI);
-        log.info("Migration Version: " + this.migrationVersion);
+        log.info("Migration Version: '" + this.migrationVersion + "'");
 
         try {
             Kiji kiji = Kiji.Factory.open(KijiURI.newBuilder(kijiURI).build());
@@ -56,6 +56,7 @@ public class ResetMojo extends AbstractMojo {
         } catch (Exception ex) {
             throw new MojoExecutionException("Error while resetting migration version", ex);
         }
+        log.info("Reset complete");
     }
 
     private void setMigration(Kiji kiji, String migration) throws IOException {
