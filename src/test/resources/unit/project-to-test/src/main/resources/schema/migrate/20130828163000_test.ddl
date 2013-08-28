@@ -1,5 +1,5 @@
 
-CREATE TABLE schema_migrations WITH DESCRIPTION 'schema migration versions from kiji-schema-migrations'
+CREATE TABLE schema_migrations_test WITH DESCRIPTION 'schema migration test table'
 ROW KEY FORMAT (instance)
 WITH
   LOCALITY GROUP default
