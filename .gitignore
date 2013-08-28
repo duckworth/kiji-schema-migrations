@@ -1,1 +1,24 @@
+# Editor temp files.
+*.iml
+*.swn
+*.swo
+*.swp
+*~
+
+# Build and run output.
 target/
+build/
+log/
+tmp/
+logs/
+
+# IDE project files.
+.project
+.settings
+.classpath
+.idea/
+.jde/
+/prj.el
+.DS_Store
+.bundle
+
