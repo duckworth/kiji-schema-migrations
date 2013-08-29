@@ -7,7 +7,7 @@ as part of CI build process or from command line.
 ### Usage
 Place you ddl scripts into `src/main/resources/schema/migrate`, name them using `${migration-id}_${migration-name}.ddl`
 as a convention, where `${migration-id}` is date / time, i.e. "20130828163000"
-and ${migration-name} is some description of a change, i.e. "AddRecordLabelField".
+and `${migration-name}` is some description of a change, i.e. "Add_Record_Label_Field".
 
 Add the following to your pom:
 
