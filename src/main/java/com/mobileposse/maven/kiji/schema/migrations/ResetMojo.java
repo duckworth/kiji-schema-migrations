@@ -20,21 +20,21 @@ public class ResetMojo extends AbstractMojo {
     /**
      * The kiji uri
      *
-     * @parameter default-value="kiji://.env/default"
+     * @parameter expression="${kijiURI}" default-value="kiji://.env/default"
      */
     public String kijiURI;
 
     /**
      * Key to be used in kiji system table to keep track of latest migration version
      *
-     * @parameter default-value="user.schema.migration.version"
+     * @parameter expression="${migrationKey}" default-value="user.schema.migration.version"
      */
     public String migrationKey = "user.schema.migration.version";
 
     /**
      * Value to reset the migration version to
      *
-     * @parameter default-value=""
+     * @parameter expression="${migrationVersion}" default-value=""
      */
     public String migrationVersion = "";
 

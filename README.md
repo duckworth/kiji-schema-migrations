@@ -28,7 +28,7 @@ Add the following to your pom:
         </executions>
         <configuration>
           <kijiURI>kiji://.env/sandbox</kijiURI>
-          <migrateFolder>${project.basedir}/src/main/resources/schema/migrate</migrateFolder>
+          <migrateFolder>${project.basedir}/src/main/resources/migrations</migrateFolder>
         </configuration>
       </plugin>
       ...
@@ -39,9 +39,9 @@ Default values for `kijiURL` and `migrateFolder` are `kiji://.env/default` and `
 
 You can explicitly invoke the plugin by running one of the following goals:
 
-> `mvn kiji-schema-migrations:migrate`
+> `mvn kiji-schema-migrations:generate -DmigrationName=A_Lot_Of_Changes`
 
-or
+> `mvn kiji-schema-migrations:migrate`
 
 > `mvn kiji-schema-migrations:reset`
 
@@ -49,7 +49,6 @@ The plugin keeps latest applied migration in `user.schema.migration.version` pro
 To use different property you can specify `migrationKey' configuration parameter.
 Execution of `migrate` goal runs all the ddl scripts that have `${migration-id}` higher than latest saved one,
 updating migration version in kiji system after each successful execution.
-Execution of `reset` goal sets the migration version to empty string, leaving you with cleanup of the schema manually.
+Execution of `reset` goal sets the migration version to empty string, leaving cleanup of the schema to you.
 You can override the migration version to reset to by specifying `migrationVersion` configuration property.
 
-TODO (AR): add expressions to be able to provide values for configuration properties when running maven from command line.
