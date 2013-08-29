@@ -13,18 +13,18 @@
       <plugin>
         <groupId>com.mobileposse.maven.plugins</groupId>
         <artifactId>kiji-schema-migrations-maven-plugin</artifactId>
-        <version>0.1.0-SNAPSHOT</version>
-        <!-- <executions>
+        <version>0.2.0-SNAPSHOT</version>
+        <executions>
           <execution>
             <goals>
               <goal>migrate</goal>
             </goals>
             <phase>pre-integration-test</phase>
           </execution>
-        </executions> -->
+        </executions>
         <configuration>
-          <!-- <kijiURI>kiji://.env/mp_sandbox</kijiURI> -->
-          <!-- <migrateFolder>${project.basedir}/src/main/resources/schema/migrate</migrateFolder> -->
+          <kijiURI>kiji://.env/sandbox</kijiURI>
+          <migrateFolder>${project.basedir}/src/main/resources/schema/migrate</migrateFolder>
         </configuration>
       </plugin>
     </plugins>

@@ -56,3 +56,14 @@ updating migration version in kiji system after each successful execution.
 Execution of `reset` goal sets the migration version to empty string, leaving cleanup of the schema to you.
 You can override the migration version to reset to by specifying `migrationVersion` configuration property.
 
+### Development
+
+In current version the unit tests are more like integration tests and require bento box running and sandbox kiji instance installed:
+
+> `bento start`
+
+> `kiji install --kiji=kiji://.env/sandbox`
+
+> `mvn clean install`
+
+

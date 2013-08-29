@@ -31,7 +31,7 @@ public class MigrateMojoTest extends AbstractMojoTestCase {
         MigrateMojo migrateMojo = (MigrateMojo) lookupMojo("migrate", pom);
         assertNotNull(migrateMojo);
         migrateMojo.migrateFolder = new File(testBasedir, "src/main/resources/schema/migrate").getCanonicalPath();
-        migrateMojo.kijiURI = "kiji://.env/default";
+        migrateMojo.kijiURI = "kiji://.env/sandbox";
         migrateMojo.execute();
     }
 }

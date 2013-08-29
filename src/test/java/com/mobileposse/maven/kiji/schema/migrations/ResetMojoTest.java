@@ -30,7 +30,7 @@ public class ResetMojoTest extends AbstractMojoTestCase {
 
         ResetMojo resetMojo = (ResetMojo) lookupMojo("reset", pom);
         assertNotNull(resetMojo);
-        resetMojo.kijiURI = "kiji://.env/default";
+        resetMojo.kijiURI = "kiji://.env/sandbox";
         resetMojo.execute();
     }
 }
