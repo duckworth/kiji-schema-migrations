@@ -21,8 +21,6 @@ import org.kiji.schema.util.ResourceUtils;
  * Run the migration scripts
  *
  * @goal migrate
- * @phase pre-integration-test
- * @requiresDependencyResolution test
  */
 public class MigrateMojo extends AbstractMojo {
 

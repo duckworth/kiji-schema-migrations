@@ -5,7 +5,7 @@ import java.io.File;
 import org.apache.maven.plugin.testing.AbstractMojoTestCase;
 
 /**
- * Resets the migration version
+ * generates the migration version
  */
 public class GenerateMojoTest extends AbstractMojoTestCase {
 
@@ -22,15 +22,15 @@ public class GenerateMojoTest extends AbstractMojoTestCase {
     /**
      * @throws Exception if any
      */
-    public void testResetDefault() throws Exception {
+    public void testgenerateDefault() throws Exception {
         File testBasedir = getTestFile("src/test/resources/unit/project-to-test");
         File pom = new File(testBasedir, "pom.xml");
         assertNotNull(pom);
         assertTrue(pom.exists());
 
-        ResetMojo resetMojo = (ResetMojo) lookupMojo("reset", pom);
-        assertNotNull(resetMojo);
-        resetMojo.kijiURI = "kiji://.env/default";
-        resetMojo.execute();
+        GenerateMojo generateMojo = (GenerateMojo) lookupMojo("generate", pom);
+        assertNotNull(generateMojo);
+        generateMojo.migrateFolder = new File(testBasedir, "target/schema/migrate").getCanonicalPath();
+        generateMojo.execute();
     }
 }
