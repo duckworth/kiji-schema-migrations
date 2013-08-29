@@ -20,14 +20,14 @@ public class GenerateMojo extends AbstractMojo {
     /**
      * Base directory of the scanning process
      *
-     * @parameter expression="${migrateFolder}" default-value="${project.basedir}/src/main/resources/schema/migrate"
+     * @parameter property="migrateFolder" default-value="${project.basedir}/src/main/resources/schema/migrate"
      */
     public String migrateFolder;
 
     /**
      * Name of the migration
      *
-     * @parameter expression="${migrationName}" default-value="TBD"
+     * @parameter property="migrationName" default-value="TBD"
      */
     public String migrationName = "TBD";
 

@@ -17,6 +17,18 @@
     <developerConnection>scm:git:git@github.com:duckworth/kiji-schema-migrations.git</developerConnection>
     <url>scm:git:git@github.com:duckworth/kiji-schema-migrations.git</url>
   </scm>
+  <distributionManagement>
+    <repository>
+      <id>dev-controller.mobileposse.com</id>
+      <name>dev-controller.mobileposse.com-releases</name>
+      <url>https://dev-controller.mobileposse.com/artifactory/libs-release-local</url>
+    </repository>
+    <snapshotRepository>
+      <id>dev-controller.mobileposse.com</id>
+      <name>dev-controller.mobileposse.com-snapshots</name>
+      <url>https://dev-controller.mobileposse.com/artifactory/libs-snapshot-local</url>
+    </snapshotRepository>
+  </distributionManagement>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>

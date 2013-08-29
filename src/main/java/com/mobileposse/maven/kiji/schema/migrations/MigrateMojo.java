@@ -27,21 +27,21 @@ public class MigrateMojo extends AbstractMojo {
     /**
      * The kiji uri
      *
-     * @parameter expression="${kijiURI}" default-value="kiji://.env/default"
+     * @parameter property="kijiURI" default-value="kiji://.env/default"
      */
     public String kijiURI;
 
     /**
      * Base directory of the scanning process
      *
-     * @parameter expression="${migrateFolder}" default-value="${project.basedir}/src/main/resources/schema/migrate"
+     * @parameter property="migrateFolder" default-value="${project.basedir}/src/main/resources/schema/migrate"
      */
     public String migrateFolder;
 
     /**
      * Key to be used in kiji system table to keep track of latest migration version
      *
-     * @parameter expression="${migrationKey}" default-value="user.schema.migration.version"
+     * @parameter property="migrationKey" default-value="user.schema.migration.version"
      */
     public String migrationKey = "user.schema.migration.version";
 
