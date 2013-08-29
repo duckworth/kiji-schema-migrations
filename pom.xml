@@ -63,7 +63,7 @@
   <build>
     <plugins>
       <plugin>
-        <groupId>org.apache.maven</groupId>
+        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-plugin-plugin</artifactId>
         <version>3.2</version>
       </plugin>
