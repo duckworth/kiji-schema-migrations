@@ -18,7 +18,6 @@ logs/
 .classpath
 .idea/
 .jde/
-/prj.el
 .DS_Store
 .bundle
 
